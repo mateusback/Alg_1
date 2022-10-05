@@ -1,140 +1,307 @@
-# Exercício 1:
+#1
+# definindo o vetor
+v = [0] * 100
+
+# inserindo valores no vetor
+for i in range(1, len(v)+1):
+    v[i-1] = i
+
+# a
+for i in range(0, len(v)):
+    print(v[i])
+
+# b
+for i in range(len(v)-1, -1, -1):
+    print(v[i])
+
+# c
+for i in range(0, len(v)):
+    print("O dobro de", v[i], "é:", v[i]*2)
+
+# d
+soma = 0
+for i in range(0, len(v)):
+    soma += v[i]
+print("A soma de todos os números é:", soma)
+
+# e
+soma = 0
+media = 0
+for i in range(0, len(v)):
+    soma += v[i]
+media = soma / len(v)
+print("A média geral entre os valores é:", media)
+
+# f
+for i in range(0,len(v)):
+    if (v[i] % 2 == 0):
+        print(v[i])
+
+#2
 import random
+v = [0] * 6
+vsorte = [0] * 6
 
-print("== Menu de Opções ==")
-print("1. Somar 2 números")
-print("2. Potência Y de um número X (x^y)")
-print("3. Raiz quadrada de X")
-print("4. Gerar um número aleatório")
-escolha = input("== Opção escolhida: ")
+for i in range(0, len(v)):
+    v[i] = int(input(f"Informe o {i+1}° valor: "))
+    vsorte[i] = random.randint(1, 100)
+for i in range(0, len(vsorte)):
+    print(f"O {i+1}° número sorteado foi:", vsorte[i])
 
-if(escolha=="1"):
-    n1 = int(input("Informe o primeiro valor: "))
-    n2 = int(input("Informe o segundo valor: "))
-    soma = n1 + n2
-    print("A soma dos valores apresentados é:", soma)
+#3
+v = [''] * 5
 
-elif(escolha == "2"):
-    n1 = int(input("Informe o valor de X: "))
-    n2 = int(input("Informe o valor de Y: "))
-    pot = n1**n2
-    print("O resultado da potência é:", pot)
+for i in range(0, len(v)):
+    v[i] = input(f"Informe o nome do {i+1}° aluno: ")
 
-elif(escolha == "3"):
-    n1 = int(input("Informe o valor de X: "))
-    raiz = n1 ** 0.5
-    print("O resultado da raiz é:", raiz)
+for i in range(0, len(v)):
+    print(f"O nome do {i+1}° aluno é:", v[i])
 
-elif(escolha == "4"):
-    print("O número sorteado é:", random.randint(1,10000000000000000000000000000000000000000000000000000000000000))
+#4
+v = [0] * int(input("Informe o tamanho do vetor: "))
 
-else:
-    print("digita certo ae")
+for i in range(0, len(v)):
+    v[i] = int(input(f"Informe o {i+1}° valor: "))
 
-# Exercício 2:
-altura = float(input("Informe sua altura: "))
-peso = float(input("Informe seu peso: "))
-imc = peso/altura**2
-if(imc<18.5):
-    print("Baixo peso")
-elif(imc<=18,5 and imc>=24.9):
-    print("Peso normal")
-elif(imc<=25 and imc>=29.9):
-    print("Pré-obesidade")
-elif(imc<=30 and imc>=34.9):
-    print("Obesidade Grau I")
-elif(imc<=35 and imc>=39.9):
-    print("Obesidade Grau II")
-else:
-    print("Obesidade Grau III")
+for i in range(0, len(v)):
+    print(f"Informe o {i+1}° valor digitado foi:", v[i])
 
+#5
+from xmlrpc.client import MAXINT, MININT
 
-# Exercício 3:
-salario = float(input("Infrome seu salário: "))
+# definindo o vetor:
+v = [0] * int(input("Informe o tamanho do vetor: "))
 
-if(salario<=710.00):
-    aumento = salario * (20/100)
-    novosalario = aumento + salario
-    print("Seu salário era:", salario)
-    print("O percentual do reajuste foi de 20%")
-    print("O valor aumento foi:", aumento)
-    print("Seu salário com o reajuste é:", novosalario)
+# informando os valores do vetor:
+for i in range(0, len(v)):
+    v[i] = int(input(f"Informe o {i+1}° valor: "))
+
+# a
+for i in range(len(v)-1, -1, -1):
+    print(f"Informe o {i+1}° valor digitado foi:", v[i])
+
+# b
+soma = 0
+for i in range(0, len(v)):
+    soma += v[i]
+print(f"A soma dos {len(v)} valores infomados é:", soma)
+
+# c
+soma = 0
+media = 0
+for i in range(0, len(v)):
+    soma += v[i]
+media = soma / len(v)
+print(f"A média geral dos {len(v)} valores informados é:", media)
+
+# d
+for i in range(0, len(v), 2):
+    print(f"O valor {v[i]} está em um índice de número par ({i})")
+
+# e
+alpha = int(input("Informe o índice inicial de busca: "))
+omega = int(input("Informe o índice final de busca: "))
+
+for i in range(alpha, omega+1):
+    print(v[i])
+
+# f
+alpha = int(input("Informe o índice inicial de busca: "))
+omega = int(input("Informe o índice final de busca: "))
+soma = 0
+
+for i in range(alpha, omega+1):
+    soma += v[i]
+print(f"A soma dos valores entre os índices {alpha} e {omega} é:", soma)
+
+# g
+maior = MININT
+menor = MAXINT
+for i in range(0, len(v)):
+    if (v[i] >= maior):
+        maior = v[i]
+    elif (v[i] <= menor):
+        menor = v[~i]
+print(f"{maior} foi o maior valor iformado")
+print(f"{menor} foi o maior valor iformado")
+
+# h
+maior = MININT
+menor = MAXINT
+pmaior = 0
+pmenor = 0
+for i in range(0, len(v)):
+    if (v[i] >= maior):
+        maior = v[i]
+        pmaior = i
+    elif (v[i] <= menor):
+        menor = v[~i]
+        pmenor = i
+print(f"{menor} foi o menor valor iformado e está no índice {pmenor}")
+print(f"{maior} foi o maior valor iformado e está no índice {pmaior}")
     
-
-elif(salario >= 710.01 and salario <= 1000.0):
-    aumento = salario * (15/100)
-    novosalario = aumento + salario
-    print("Seu salário era:", salario)
-    print("O percentual do reajuste foi de 15%")
-    print("O valor aumento foi:", aumento)
-    print("Seu salário com o reajuste é:", novosalario)
-
-elif(salario >= 1000.01 and salario <= 25000.00):
-    aumento = salario * (10/100)
-    novosalario = aumento + salario
-    print("Seu salário era:", salario)
-    print("O percentual do reajuste foi de 10%")
-    print("O valor aumento foi:", aumento)
-    print("Seu salário com o reajuste é:", novosalario)
-else:
-    aumento = salario * (5/100)
-    novosalario = aumento + salario
-    print("Seu salário era:", salario)
-    print("O percentual do reajuste foi de 5%")
-    print("O valor aumento foi:", aumento)
-    print("Seu salário com o reajuste é:", novosalario)
-
-# Exercício 4:
-import random
-
-print("== Menu de Opções ==")
-print("1. Gerar um número aleatório entre X e Y")
-print("2. X é par ou ímpar?")
-print("3. Valor R$X com Y% de desconto")
-
-op = int(input("== Opção escolhida: "))
-
-if (op==1):
-    x = int(input("Informe o valor de x: "))
-    y = int(input("Informe o valor de y: "))
-    print("O número sorteado é:", random.randint(x,y))
-elif(op==2):
-    x = int(input("Informe o valor de x: "))
-    if (x%2) == 0:
-        print("Par")
+# i
+par = 0
+impar = 0
+for i in range(0, len(v)):
+    if (v[i] % 2 == 0):
+        par += 1
     else:
-        print("Ímpar")
-elif(op==3):
-    x = float(input("Informe o valor de x: "))
-    y = int(input("Informe o valor de y: "))
-    desconto = x * (y/100)
-    valor = x - desconto
-    print("Valor R$",x,"com",y,"% de desconto é:",valor)
+        impar += 1
+print(f"A quantidade de números pares informados foi de: {par}")
+print(f"A quantidade de números impares informados foi de: {impar}")
+
+#6 - null
+
+#7
+vAlunos = [''] * int(input("Informe o número de alunos: "))
+vConceitos = [''] * len(vAlunos)
+
+for i in range (0, len(vAlunos)):
+    vAlunos[i] = input(f"Digite o nome do {i+1}° aluno: ")
+    vConceitos[i] = input(f"Informe o conceito do(a) {vAlunos[i]}: ")
+
+for i in range (0, len(vAlunos)):
+    print(f"{vAlunos[i]} ficou com o conceito: {vConceitos[i]}")
+
+#8
+vSorteados = [0] * 6
+vApostados = [0] * 6
+acertos = 0
+
+for i in range(0, len(vSorteados)):
+    vSorteados[i] = int(input(f"Informe o {i+1}° valor sorteado: "))
+print("-------------")
+for i in range(0, len(vApostados)):
+    vApostados[i] = int(input(f"Informe o {i+1}° valor apostado: "))
+    if (vApostados[i] == vSorteados[i]):
+        acertos += 1
+if (acertos <= 3):
+    print(f"Você acertou {acertos}, e não ganhou nada")
+elif (acertos == 4):
+    print("Você acertou a quadra!")
+elif (acertos == 5):
+    print("Você acertou a quina!")
 else:
-    print("Digite uma opção valida")
+    print("Você nunca mais vai precisar trabalhar!")
 
-# Exercício 5:
+#9
+import random
 
-kgMaca = float(input("Informe a quantidade de Kg de maçãs compradas: "))
-kgMorango = float(input("Informe a quantidade de Kg de morangos comprados: "))
-totalKg = kgMorango + kgMaca
-vlMorango = 0.0
-vlMaca = 0.0
+v = [0] * 6
+sorteados = random.sample(range(1, 100), 6) #gerando uma amostra entre 1 e 100 de 6 números
+acertos = 0
 
-if(kgMaca>5):
-    vlMaca = kgMaca * 3.50
-    
-if(kgMorango>5):
-    vlMorango = kgMorango * 7.90
+for i in range (0, len(sorteados)):
+    print(sorteados[i])
+for i in range(0, len(sorteados)):
+    v[i] = int(input(f"Informe o {i+1}° valor apostado: "))
 
-if(kgMaca<=5 and kgMorango<=5):
-    vlMaca = kgMaca * 3.90
-    vlMorango = kgMorango * 8.90
+# bouble
+for i in range(len(sorteados)-1, 0, -1):
+    for j in range (0, i):
+        if sorteados[j]>sorteados[j+1]:
+            aux = sorteados[j+1]
+            sorteados[j+1] = sorteados[j]
+            sorteados[j]= aux
 
-totalVl = vlMaca + vlMorango
+for i in range (0,len(v)):
+    if (v[i] == sorteados[i]):
+        acertos +=1
+if (acertos <= 3):
+    print(f"Você acertou {acertos}, e não ganhou nada")
+elif (acertos == 4):
+    print("Você acertou a quadra!")
+elif (acertos == 5):
+    print("Você acertou a quina!")
+else:
+    print("Você nunca mais vai precisar trabalhar!")
 
-if(totalVl>25.0 or totalKg>8):
-    compra = totalVl - totalVl * (7/100)
-    print("O valor da compra, com 7% de desocnto, é de: R$", compra)
-elif(totalVl < 25.0 or totalKg <8):
-    print("O valor da compra é de: R$", totalVl)
+#10
+nome = input("Digite um nome: ")
+v = list(nome)
+primeira = 0
+ultima = len(v)-1
+while (primeira <= ultima):
+    aux = v[primeira]
+    v[primeira] = v[ultima]
+    v[ultima] = aux
+    primeira +=1
+    ultima -= 1
+print(v)
+
+#11
+import random
+pessoas = [''] * 10
+for i in range (0,len(pessoas)):
+    pessoas[i] = input(f"Informe o nome da {i+1}° pessoa: ")
+print(f"A pessoa escolhida foi: {pessoas[random.randint(0,10)]}")
+
+# 12
+pergunta = ["Telefonou para a vítima?", "Esteve no local do crime?", "Mora perto da vítima?","Devia para a vítima?","Já trabalhou com a vítima?"]
+resposta = [''] * len(pergunta)
+cont = 0
+for i in range (0,len(pergunta)):
+    print(pergunta[i])
+    resposta[i] =  str.lower(input("S/N: "))
+    if (resposta[i] == "s" or resposta[i] == "sim"):
+        cont += 1
+print("-------------")
+if (cont == 2):
+    print ("Suspeita")
+elif (cont>=3 and cont<=4):
+    print ("Cúmplice")
+elif(cont==5):
+    print("Assassino")
+else:
+    print("Inocente")
+
+# 13
+cont = 0
+votos = [1]
+deusMeAjude = 0
+sistema = [0] * 6
+while (votos[cont] != 0):
+    deusMeAjude = int(input(
+        f"Qual o melhor Sistema Operacional para uso em servidores?\n 1- Windows Server \n 2- Unix\n 3- Linux\n 4- Netware\n 5- Mac OS\n 6- Outro\n"))
+    if(deusMeAjude< 0 or deusMeAjude>6):
+        print("Opção invalida")
+    else:
+        votos.append(deusMeAjude)
+        for i in range (1,len(sistema)):
+            if(votos[cont]==i):
+                sistema[i-1] += 1
+        cont += 1
+maior = 0
+for i in range (0,len(sistema)):
+    if (i == 0):
+        i = maior
+    if (sistema[i] > maior):
+        maior = i
+sistema[0] -= 1 #arrumando uma gambiarra
+total = len(votos) - 2
+if(total != 0):
+    print(f"Sistema Operacional     Votos               %"   )
+    print(f"-------------------     -----------         ------")
+    print(f"Windows Server          {sistema[0]}        {(sistema[0]*100)/total}%")
+    print(f"Unix                    {sistema[1]}        {(sistema[1]*100)/total}%")
+    print(f"Linux                   {sistema[2]}        {(sistema[2]*100)/total}%")
+    print(f"Netware                 {sistema[3]}        {(sistema[3]*100)/total}%")
+    print(f"Mac                     {sistema[4]}        {(sistema[4]*100)/total}%")
+    print(f"Outro                   {sistema[5]}        {(sistema[5]*100)/total}%")
+    print(f"-------------------     -----------         ------")
+    print(f"Total:                  {total}")
+    if(maior == 0):
+        print(f"O sistema Operacional mais votado foi o Windows Server, com {sistema[0]} votos, correspondendo a {(sistema[0]*100)/total}% dos votos")
+    if(maior == 1):
+        print(f"O sistema Operacional mais votado foi o Unix, com {sistema[1]} votos, correspondendo a {(sistema[1]*100)/total}% dos votos")
+    if(maior == 2):
+        print(f"O sistema Operacional mais votado foi o Linux, com {sistema[2]} votos, correspondendo a {(sistema[2]*100)/total}% dos votos")
+    if(maior == 3):
+        print(f"O sistema Operacional mais votado foi o Netware, com {sistema[3]} votos, correspondendo a {(sistema[3]*100)/total}% dos votos")
+    if(maior == 4):
+        print(f"O sistema Operacional mais votado foi o Mac, com {sistema[4]} votos, correspondendo a {(sistema[4]*100)/total}% dos votos")
+    if(maior == 5):
+        print(f"O sistema Operacional mais votado foi o Outro, com {sistema[5]} votos, correspondendo a {(sistema[5]*100)/total}% dos votos")
+else:
+    print("Não houve votos válidos")

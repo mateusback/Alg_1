@@ -135,7 +135,7 @@ def vogais(stri):
     stri = list(stri)
     vogais = 0
     for i in range(0, len(stri)):
-        if(stri[i] == 'a' or stri [i] == 'e' or stri [i] =='o' or stri [i] =='u'):
+        if(stri[i] == 'a' or stri [i] == 'e' or stri [i] == 'i' or stri [i] =='o' or stri [i] =='u'):
             vogais += 1
     return(vogais)
 

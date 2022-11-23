@@ -1,0 +1,18 @@
+{
+	"nome": "Teste",
+	"ch": "4840",
+	"professor": "Prof",
+	"chr": "4033.3333333333335"
+}
+{
+	"nome": "Mate",
+	"ch": "120",
+	"professor": "professor",
+	"chr": "100.0"
+}
+{
+	"nome": "qweqwe",
+	"ch": "123",
+	"professor": "ffvf",
+	"chr": "102.5"
+}
